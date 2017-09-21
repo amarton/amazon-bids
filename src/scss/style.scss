@@ -97,7 +97,7 @@ i.icon-link-ext-alt {
 		position: relative;
 		width: 100%;
 		max-width: 720px;
-		margin: 0 auto;
+		margin: 1em auto;
 		padding: 1em 0;
 		text-align: center;
 		img {
@@ -123,14 +123,11 @@ i.icon-link-ext-alt {
 		}
 		&--nopad {
 			padding: 0;
-			margin: 1em auto;
 		}
 		&--promo {
 			position: relative;
 			max-width: none;
 			padding: 0;
-			margin: 1em auto;
-			background-color: #388E3C;
 			background-color: #4CAF50;
 			img {
 				max-width: 300px;

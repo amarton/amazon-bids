@@ -534,7 +534,7 @@ i.icon-link-ext-alt {
     position: relative;
     width: 100%;
     max-width: 720px;
-    margin: 0 auto;
+    margin: 1em auto;
     padding: 1em 0;
     text-align: center; }
     .container__media img {
@@ -556,14 +556,11 @@ i.icon-link-ext-alt {
         transform: translateY(-50%);
         text-shadow: 0.05em 0.05em white, 0.1em 0.1em #ff9900; }
     .container__media--nopad {
-      padding: 0;
-      margin: 1em auto; }
+      padding: 0; }
     .container__media--promo {
       position: relative;
       max-width: none;
       padding: 0;
-      margin: 1em auto;
-      background-color: #388E3C;
       background-color: #4CAF50; }
       .container__media--promo img {
         max-width: 300px; }
