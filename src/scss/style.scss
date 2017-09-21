@@ -3,38 +3,246 @@
 // Sass mixins libraries
 @import "bourbon/bourbon";
 @import "neat/neat";
-// Base styles -- normalizes styles across browsers. 
+// Base styles -- normalizes styles across browsers.
 // Alter border-sizing styles to prevent issues in P2P HTML stories
 @import "normalize";
 @import "fonts";
 
+$accent-0: $amazon-orange;
+$gray-0: #cdcdcd;
+$gray-1: #888;
+$gray-2: #e1e1e1;
+
 body {
 	color: $offblack;
 	font-size: 14px; // body-level font size for "em"-scaled designs
+	@media(min-width: 420px) {
+		font-size: 16px;
+	}
+	@media(min-width: 800px) {
+		font-size: 18px;
+	}
 }
 h1 {
-	font-family: $montserrat;
+	margin-top: 1.5em;
+	font-size: 2.4em;
+	font-family: $georgia;
+	font-weight: 400;
+	line-height: 1.3em;
 }
 p,a {
-	font-family: $lato;
+	font-family: $georgia;
+	font-size: 1.1em;
+	line-height: 1.5em;
+}
+p {
+	&.byline {
+		margin-top: 0;
+	}
+	&.subhead {
+		margin: .2em;
+		font-size: 1.4em;
+		span {
+			font-weight: bold;
+			color: $accent-0;
+		}
+	}
+	&.stars {
+		margin: 3em 0 0 0;
+		line-height: 0;
+		i {
+			color: $accent-0;
+		}
+	}
 }
 a {
-	color: $goldenrod;
-	text-decoration: none;
+	color: $accent-0;
+	text-decoration: underline;
+	&:visited {
+		color: $gray-0;
+	}
+	&:hover {
+		color: lighten($accent-0, 10);
+	}
+	&.byline {
+		font-weight: bold;
+		text-decoration: none;
+		&:visited {
+			color: $accent-0;
+		}
+	}
+}
+i.icon-link-ext-alt {
+	color: $accent-0;
+}
+.shareButtons {
+	font-size: 1.2em;
+	color: $accent-0;
+	i {
+		cursor: pointer;
+		&:hover {
+			color: lighten($accent-0, 10);
+		}
+	}
 }
 .container {
-	margin-top: 50px; // Pushes below topnav
+	width: 100%;
+	margin-top: 50px;
+	&__text {
+		max-width: 720px;
+		margin: 0 auto;
+		padding: 0 1em;
+	}
+	&__media {
+		position: relative;
+		width: 100%;
+		max-width: 720px;
+		margin: 0 auto;
+		padding: 1em 0;
+		text-align: center;
+		img {
+			display: block;
+			width: 100%;
+			max-width: 500px;
+			margin: 0 auto;
+			@media(min-width: 420px) {
+				width: 80%;
+			}
+		}
+		&--wide {
+			max-width: none;
+			background-color: $accent-0;
+			.label {
+				position: absolute;
+				top: 35%;
+				font-size: 3em;
+				line-height: 1.3em;
+				transform: translateY(-50%);
+				text-shadow: .05em .05em white, .1em .1em $accent-0;
+			}
+		}
+		&--nopad {
+			padding: 0;
+			margin: 1em auto;
+		}
+		&--promo {
+			position: relative;
+			max-width: none;
+			padding: 0;
+			margin: 1em auto;
+			background-color: #388E3C;
+			background-color: #4CAF50;
+			img {
+				max-width: 300px;
+			}
+			.label {
+				position: absolute;
+				top: 50%;
+				left: 0;
+				font-size: 2em;
+				line-height: 1.3em;
+				transform: translateY(-50%);
+				color: $offblack;
+				text-shadow: .05em .05em #4caf50, .1em .1em white;
+				text-decoration: none;
+				&:hover {
+					color: white;
+					text-shadow: .05em .05em #4caf50, .1em .1em $offblack;
+				}
+			}
+		}
+		&--chart {
+			text-align: center;
+			p {
+				font-family: $montserrat;
+				&.subhead {
+					max-width: 500px;
+					font-size: 1.2em;
+					font-weight: bold;
+					margin: .2em auto;
+					text-transform: uppercase;
+				}
+				&.chatter {
+					font-size: .9em;
+					max-width: 500px;
+					margin: 0 auto 1.5em auto;
+				}
+				&.source {
+					color: $gray-1;
+					font-size: .8em;
+				}
+			}
+			img {
+				margin-bottom: 1.5em;
+			}
+		}
+		&--links {
+			width: 80%;
+			max-width: 500px;
+			padding: 0 1em;
+			// background-color: $accent-0;
+			text-align: left;
+			// border-radius: 15px;
+			border-top: 2px solid $accent-0;
+			border-bottom: 2px solid $accent-0;
+			p,a {
+				color: $accent-0;
+			}
+			a {
+				&:visited {
+					color: $gray-1;
+				}
+				&:hover {
+					color: lighten($accent-0,10);
+				}
+			}
+		}
+		.label {
+			width: 100%;
+			font-family: $montserrat;
+			font-weight: bold;
+			span {
+				display: block;
+				text-transform: uppercase;
+				// color: white;
+			}
+		}
+	}
 }
 
+footer {
+	margin-top: 2em;
+	p {
+		width: 100%;
+		margin: 0;
+		font-family: $montserrat;
+		font-size: .8em;
+	}
+	.source {
+		a {
+			text-transform: none;
+		}
+	}
+	.credit {
+		text-align: right;
+		a {
+			font-weight: bold;
+			text-decoration: none;
+		}
+	}
+	hr {
+		margin: .2em auto;
+	}
+}
 
 /* Leaderboard */
-// #leaderboard {
-// 	width: 728px;
-// 	height: 90px;
-// 	background-color: #222222;
-// 	margin: 10px auto;
-// 	text-align: center;
-// 	@media (max-width: 730px){
-// 		display: none;
-// 	}
-// }
+#leaderboard {
+	width: 728px;
+	height: 90px;
+	background-color: #222222;
+	margin: 10px auto;
+	text-align: center;
+	@media (max-width: 730px){
+		display: none;
+	}
+}

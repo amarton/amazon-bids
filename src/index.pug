@@ -5,7 +5,7 @@
 //- There are two datalink variables so I don't have to rewrite the link every time. 
 //- The second datalink variable declaration overwrites the first one. 
 //- When I want to switch to my server assets, I comment out the second declaration.
-- var datalink = "http://data.baltimoresun.com/PROJECTLINK/"
+- var datalink = "http://data.baltimoresun.com/news/amazon-bids/"
 - var datalink = ""
 
 doctype html
@@ -19,52 +19,253 @@ html(class="no-js", lang="en")
 	head
 		//Basic page needs
 		meta(charset="utf-8")
-		title
-		meta(name="description", content="")
-		meta(name="author", content="") 
+		title Does Baltimore meet Amazon’s criteria for a new headquarters?
+		meta(name="description", content="See how Baltimore fits in with Amazon's vision of its future headquarters.")
+		meta(name="author", content="The Baltimore Sun")
 		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
-		link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Old+Standard+TT|Lato|Montserrat")
-		//- Bootstrap, js below
-		//- link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u", crossorigin="anonymous")
+		link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Montserrat|Droid+Serif")
+		link(rel="stylesheet", type="text/css", href=datalink + "css/fontello.css")
 		link(rel="stylesheet", type="text/css", href=datalink + "css/style.css")
 
 		//Facebook Stuff
-		meta(property="og:title", content="")
-		meta(property="og:url", content="")
-		meta(property="og:image", content="")
+		meta(property="og:title", content="Does Baltimore meet Amazon’s criteria for a new headquarters?")
+		meta(property="og:url", content="http://data.baltimoresun.com/news/amazon-bids/")
+		meta(property="og:image", content="http://data.baltimoresun.com/news/amazon-bids/images/thumb.png")
 		meta(property="og:site_name", content="The Baltimore Sun")
-		meta(property="og:description", content="")
+		meta(property="og:description", content="See how Baltimore fits in with Amazon's vision of its future headquarters.")
 		meta(property="fb:app_id", content="310302989040998")
 		//Twitter Stuff
 		meta(name="twitter:card", content="summary")
 		meta(name="twitter:site", content="@baltimoresun")
-		meta(name="twitter:creator", content="")
-		meta(name="twitter:title", content="")
-		meta(name="twitter:description", content="")
-		meta(name="twitter:image", content="")
+		meta(name="twitter:creator", content="The Baltimore Sun")
+		meta(name="twitter:title", content="Does Baltimore meet Amazon’s criteria for a new headquarters?")
+		meta(name="twitter:description", content="See how Baltimore fits in with Amazon's vision of its future headquarters.")
+		meta(name="twitter:image", content="http://data.baltimoresun.com/news/amazon-bids/images/thumb.png")
 		meta(name="twitter:domain", content="baltimoresun.com")
 
 		//- Ad tag, uncomment to put in ad. Be sure to uncomment the ad-for-body below.
-		//- include includes/ad-for-header.html
-		
+		include includes/ad-for-header.html
+
 	body
-		//- This omniture file will also add a topnav. 
+		//- This omniture file will also add a topnav.
 		//- Remember to update the omniture tags
 		include includes/omniture.html
-		
+
 		.container
-			h1 H1 / MONTSERRAT
-			p P / LATO Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec eros ac risus condimentum pretium. In faucibus quis risus sit amet ornare.
-			a(href="" target="_blank") A / LATO / GOLDENROD
+			.container__text
+				h1 Does Baltimore meet Amazon’s criteria for a new headquarters?
+				.shareButtons
+					i.icon-facebook-squared
+					i.icon-twitter-squared
+				p.byline By 
+					a.byline(href="http://www.baltimoresun.com/bal-luke-broadwater-20141007-staff.html" target="_blank") Luke Broadwater
+				p The Seattle-based Internet commerce behemoth is considering building a massive second headquarters that would create 50,000 new jobs with average pay in excess of $100,000. Jurisdictions across the country — including Baltimore and Prince George’s County — are getting ready to engage in a bidding war.
+				p But does Baltimore have the environment needed to win the Amazon bid? Below we compare the criteria the company put forth in its request for proposals with what the city has to offer.
+			.container__text
+				p.stars
+					i.icon-star
+					i.icon-star
+					i.icon-star
+					i.icon-star
+					i.icon-star
+				p.subhead
+					span 1. 
+					| Amazon says it has a “preference” for a metropolitan area with 
+					span more than 1 million people.
+			.container__media.container__media--wide
+				img(src=datalink + "images/bma.png")
+				p.label
+					span Metro area 
+					span population:
+					span 2.8 million
+			.container__text
+				p While Baltimore has more than 600,000 people, the greater metropolitan area has a population of about 2.8 million.
+			.container__text
+				p.stars
+					i.icon-star
+					i.icon-star
+					i.icon-star
+					i.icon-star-empty
+					i.icon-star-empty
+				p.subhead
+					span 2. 
+					| Amazon says it is seeking a 
+					span “stable and business-friendly environment.”
+			.container__media.container__media--chart
+				p.subhead Baltimore unemployment rate
+				p.chatter According to the bureau of labor statistics, the Baltimore-Columbia-Towson metro area ranks 167 in the U.S. in terms of unemployment rates for metropolitan areas. Maryland ranks 18th out of U.S. states for unemployment.
+				img(src=datalink + "images/unemployment.png")
+				hr
+				p.subhead Maryland unemployment rate
+				img(src=datalink + "images/mdunemployment.png")
+				p.source Source: Bureau of Labor Statistics
+			.container__text
+				p After years of job losses, Baltimore’s economy has stabilized and is improving. According to state labor statistics, the city has added about 18,000 jobs over the past five years, while unemployment has dropped from 10.9 percent to 6.2 percent.
+				p Whether the city is “business-friendly” is a different question. Baltimore’s property tax rate is more than double the rest of Maryland and the city charges some fees, such as a bottle tax, that are either much higher than other jurisdictions or don’t exist elsewhere.
+				p That said, the city has cut special deals with certain businesses that give them a highly advantageous tax rate, such as the $1 annual property tax charged to the Marriott Waterfront Hotel in Harbor East. When Amazon opened a warehouse in Southeast Baltimore several years ago, city and state officials offered up more than $43 million in subsidies.
+				p Amazon’s request for bids states that special deals like those are desired: “Incentives offered by the state/province and local communities to offset initial capital outlay and ongoing operational costs will be significant factors in the decision-making process.”
+			.container__text
+				p.stars
+					i.icon-star
+					i.icon-star
+					i.icon-star
+					i.icon-star-empty
+					i.icon-star-empty
+				p.subhead
+					span 3. 
+					| Amazon says it wants a location with “the potential to attract and retain strong technical talent.” It says a 
+					span “highly educated labor pool 
+					| is critical and a 
+					span strong university system is required.”
+			.container__media.container__media--chart
+				p.subhead Educational attainment of Baltimore adults 25 and older, 2011-2015
+				img(src=datalink + "images/bmoreeducation.png")
+				hr
+				p.subhead Educational attainment of Maryland adults 25 and older, 2011-2015
+				img(src=datalink + "images/mdeducation.png")
+				p.source Source: U.S. Census Bureau
+			.container__text
+				p About one-third of Baltimore residents has a college degree, while 43 percent of Baltimore County residents do. The area is also home to many universities and colleges, including the highly competitive Johns Hopkins University. The Baltimore-Towson-Columbia metro area combined to rank No. 18 on the national list of most educated cities, as compiled by WalletHub.com.
+				p The city, however, has struggled for years to retain population, while the suburbs have grown. Last year, Baltimore lost an estimated 6,000 residents.
+			.container__text
+				p.stars
+					i.icon-star
+					i.icon-star
+					i.icon-star
+					i.icon-star
+					i.icon-star-empty
+				p.subhead
+					span 4. 
+					| Amazon states it wants to work with 
+					span “communities that think big and creatively 
+					| when considering locations and real estate options.”
+			.container__text
+				p How Baltimore fares on this criterion will likely depend on the level of creativity in the city’s bid. Baltimore officials have worked on major development projects in the past, including helping to build Oriole Park at Camden Yards, Harborplace and the planned massive project with Under Armour in Port Covington.
+			.container__media.container__media--links
+				p
+					i.icon-link-ext-alt
+					a(href="http://www.baltimoresun.com/news/maryland/baltimore-city/politics/bs-md-ci-port-covington-council-20160919-story.html" target="_blank") City Council approves $660 million bond deal for Port Covington project
+				p
+					i.icon-link-ext-alt
+					a(href="http://data.baltimoresun.com/news/port-covington/" target="_blank") Port Covington redevelopment examined
+				p
+					i.icon-link-ext-alt
+					a(href="http://www.baltimoresun.com/news/opinion/editorial/bs-md-ci-council-tif-20160201-story.html" target="_blank") Baltimore officials declare new 'standard' for passing development subsidies
+			.container__text
+				p.stars
+					i.icon-star
+					i.icon-star
+					i.icon-star
+					i.icon-star
+					i.icon-star-empty
+				p.subhead
+					span 5. 
+					| The company also states it has a “core preference” to be within 30 miles of a 
+					span population center 
+					| and within 45 minutes of an 
+					span international airport.
+			.container__media
+				img(src=datalink + "images/airports.png")
+			.container__text
+				p Baltimore surely qualifies as a population center, and Baltimore Washington International Thurgood Marshall Airport, which is nearby, has frequent flights to Europe, Canada and Mexico.
+			.container__text
+				p.stars
+					i.icon-star
+					i.icon-star
+					i.icon-star
+					i.icon-star
+					i.icon-star-empty
+				p.subhead
+					span 6. 
+					| Amazon also wants to be located within two miles of a 
+					span major highway 
+					| and have access to 
+					span mass transit 
+					| options at his new headquarters.
+			.container__text
+				p Depending on the site in Baltimore, both of these preferences could be accommodated — through the light rail, subway or bus system — although the death of the planned East-West Red Line light rail limits the locations where Amazon could build.
+			.container__media.container__media--links
+				p
+					i.icon-link-ext-alt
+					a(href="http://www.baltimoresun.com/news/maryland/baltimore-city/bs-md-baltimorelink-launch-20170619-story.html" target="_blank") Some bumps in the road for bus riders as BaltimoreLink hits city streets
+				p
+					i.icon-link-ext-alt
+					a(href="http://www.baltimoresun.com/news/opinion/editorial/bs-md-hogan-transportation-20150624-story.html" target="_blank") Hogan says no to Red Line
+				p
+					i.icon-link-ext-alt
+					a(href="http://www.baltimoresun.com/93118265-132.html" target="_blank") MTA's Light Rail turns 25
+				p
+					i.icon-link-ext-alt
+					a(href="http://www.baltimoresun.com/topic/transportation/charm-city-circulator-ORCRP00017641-topic.html" target="_blank") Charm City Circulator
+				P
+					i.icon-link-ext-alt
+					a(href="http://www.baltimoresun.com/news/maryland/baltimore-city/bs-md-ci-water-taxi-20161107-story.html" target="_blank") Sagamore unveils first new Baltimore water taxi
+				p
+					i.icon-link-ext-alt
+					a(href="http://www.baltimoresun.com/business/bal-baltimore-s-water-taxis-20160816-photogallery.html" target="_blank") Baltimore's water taxis
+			.container__text
+				p.stars
+					i.icon-star
+					i.icon-star
+					i.icon-star
+					i.icon-star
+					i.icon-star-empty
+				p.subhead
+					span 7. 
+					| The company also states it would consider building a new campus in an 
+					span “urban or downtown” area 
+					| with a “similar layout” to Amazon’s Seattle campus. It would prefer a site that is already 
+					span prepped for development.
+			.container__media.container__media--wide.container__media--nopad
+				img(src=datalink + "images/portcov.png")
+			.container__text
+				p With some 40,000 vacant properties in Baltimore, the city offers space to accommodate a large corporate campus. The planned Port Covington development already has infrastructure money approved by the City Council. Also, the city has already approved tax breaks for a future development at the current State Center site in Midtown.
+			.container__text
+				p.stars
+					i.icon-star
+					i.icon-star
+					i.icon-star
+					i.icon-star
+					i.icon-star-empty
+				p.subhead
+					span 8. 
+					| Finally, the company says it is considering the 
+					span “culture” and “quality of life” 
+					| of the areas it is considering. Company officials say they are looking for a place that can support a 
+					span “diverse population” with “excellent institutions of higher education” 
+					| and local government officials who are “eager and willing” to work with the firm. “We want to invest in a community where our employees will enjoy living, recreational opportunities, educational opportunities, and an overall high quality of life,” the request for proposals states.
+			.container__media.container__media--promo
+				img(src=datalink + "images/city.png")
+				p
+					a.label(href="http://data.baltimoresun.com/news/neighborhood-health/" target="_blank")
+						span Click for
+						span Neighborhood
+						span Health Statistics
+			.container__text
+				p Baltimore is often known for crime and blight, but there’s much more to the city than that. The travel website Atlas Obscura has called Baltimore America's most eccentric city, citing such factors as Edgar Allan Poe's gravesite and the naming site of the Ouija board. Zagat has named Baltimore as high as No. 2 on its list of best food cities. And Entrepreneur magazine has named Baltimore second on a list of "Hot Startup Cities That Aren't San Francisco or New York," emphasizing its concentration of companies working in the education field.
+			.container__text
+				p.stars
+				p.subhead
+					span More coverage:
+				p
+					i.icon-link-ext-alt
+					a(href="http://www.baltimoresun.com/news/maryland/politics/bs-md-hogan-amazon-20170915-story.html" target="_blank") Hogan to lobby for bringing Amazon HQ to Baltimore
+				p
+					i.icon-link-ext-alt
+					a(href="http://www.baltimoresun.com/news/maryland/politics/bs-md-amazon-baker-hogan-20170919-story.html" target="_blank") Prince George’s joins Baltimore in competing for Amazon headquarters
+				p
+					i.icon-link-ext-alt
+					a(href="http://www.baltimoresun.com/news/opinion/editorial/bs-ed-0921-amazon-headquarters-20170920-story.html" target="_blank") Amazon HQ2: Thanks for nothing, Rushern
+
 		//- Ad tag, uncomment to put in ad. Be sure to uncomment the ad-for-header above.
-		//- #leaderboard			
+		#leaderboard
 			include includes/ad-for-body.html
-		
+
+		footer
+			hr
+			p.credit Design by Jin Bae Kim / 
+				a(href="http://www.baltimoresun.com/news/data/" target="_blank") @baltsundata
 		//Javascript
-		//- MAKE SURE TO CHECK OUT package.json and look at the uglify script. 
 		script(src=datalink + "js/min/jquery-3.0.0.min.js")
-		//- Bootstrap, css above
-		//- script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", crossorigin="anonymous")
 		script(src=datalink + "js/app.js")
 		//- script(src=datalink + "js/app.min.js")
-		
